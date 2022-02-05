@@ -84,7 +84,7 @@ else{
  return Total;
 }
 
-const totalCost = picnicBudget(201);
+const totalCost = picnicBudget(100);
 // console.log(totalCost)
 
 
@@ -94,17 +94,22 @@ const totalCost = picnicBudget(201);
 
 function oddFriend(friendName){
 let oddsName = '';
-for(friend of friendName){
-nameOdd = friend;
-text = nameOdd.length;
-if(text %2 ==1){
-    oddsName = friend + oddsName;
-    break;
+
+if(typeof friendName === 'object' ){
+    for(friend of friendName){
+     text = friend.length;
+        if(text %2 ==1){
+            oddsName = friend;
+            break;
+        }
+        
+    }
+}
+else{
+    console.log("Please insert a Name of Array please")
+}
+    return oddsName;
 
 }
-}
-return oddsName;
-
-}
-const oddName = oddFriend(['farhan','tasnova','fairooz','mahi','razel']);
-// console.log(oddName)
+const oddName = oddFriend(['Farhan','tasnova','fairooz','mahi','razel']);
+console.log(oddName)

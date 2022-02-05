@@ -102,7 +102,6 @@ if(typeof friendName === 'object' ){
             oddsName = friend;
             break;
         }
-        
     }
 }
 else{
@@ -112,4 +111,4 @@ else{
 
 }
 const oddName = oddFriend(['Farhan','tasnova','fairooz','mahi','razel']);
-console.log(oddName)
+// console.log(oddName)
